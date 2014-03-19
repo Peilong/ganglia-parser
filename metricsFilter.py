@@ -78,10 +78,10 @@ def generate_png_time(jsonfilename, pngfilename,
     p = re.compile('ip-\w{1,3}-\w{1,3}-\w{1,3}-\w{1,3}\.ec2\.internal')
     r = p.findall(jsonfilename)
     #print r[0]
-    plt.title(r[0])
+    plt.title(r[0])   
     plt.plot(tmpx, tmpy, 'k')
     plt.ylabel(metric)
-    plt.xlabel('Time in ms ( start time = '+option_timestart+' )')
+    plt.xlabel('Time in s ( start time = '+option_timestart+' )')
     plt.savefig(pngfilename)
 
                         
@@ -142,7 +142,7 @@ cf.read(filename)
 metrics = cf.get("option","metrics")
 option_timestart = cf.get("option","time_start")
 # convert seconds to milliseconds
-option_timeduration = int(cf.get("option","time_duration"))*1000
+option_timeduration = int(cf.get("option","time_duration"))
 #option_timeend = int(cf.get("option","time_end")
 
 timestart_dt = datetime.datetime.strptime (option_timestart, "%Y/%m/%d %H:%M:%S")

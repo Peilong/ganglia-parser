@@ -2,6 +2,7 @@ ganglia-parser
 ==============
 
 Parser to retrieve and plot Ganglia metrics from an EC2 cluster
+<<<<<<< HEAD
 
 --------------
 How to use:
@@ -31,3 +32,5 @@ the other is png figures that visualized the JSON data.
 The parser can only parse the latest one-hour metrics. So it must be
 executed right after the workload under study completes.
 
+=======
+>>>>>>> bee908d829b105f0d1a1c7a211530a6f6c181bdc
